@@ -1,0 +1,36 @@
+/* Google Fonts Import Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  scroll-behavior: initial;
+}
+
+section
+{
+    width: 100x;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8em;
+    font-weight: 800;
+    color: blue;
+    text-transform: uppercase;
+    background-image: url('Areen Mohammed.jpg');
+}
+section
+{
+    width: 100x;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8em;
+    font-weight: 800;
+    color: blue;
+    text-transform: uppercase;
+    background: var(--img);
+}

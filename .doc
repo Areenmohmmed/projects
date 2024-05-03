@@ -1,0 +1,46 @@
+        <body style='
+            background-color: deepskyblue;
+            font-family: montserrat;
+            font-weight: 700; position: -ms-page;'>
+            <div class="wrapper">
+                <div class="skill-area">
+                    <h2>Animated Skillbar</h2>
+                    <div class="box">
+                        <div class="content">
+                            <span>Graphics Design</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="line-area">
+                            <div id="line-1"></div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="content">
+                            <span>Web Design</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="line-area">
+                            <div id="line-2"></div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="content">
+                            <span>Photography</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="line-area">
+                            <div id="line-3"></div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="content">
+                            <span>Travelling</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="line-area">
+                            <div id="line-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
