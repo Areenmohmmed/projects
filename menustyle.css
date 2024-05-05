@@ -2,50 +2,89 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
 
 }
+
 @font-face {
     font-family: 'my';
     src: url(sansation_light.woff);
   }
 
 
-header {
-    position:fixed;
-    top: 15;
-    left: 10;
+nav{
+    background-color:rgb(70, 70, 218);
+
+    position: fixed;
     width: 100%;
-    padding: 30px 120px;
-    background: rgb(80,80,190);
-    display:inline-flex;
-    justify-content: space-between;
-    align-items:center ;
-    z-index: 50px;
 }
-
-
-
-.logo {
-    font-size: 1px;
-    color: #971f1f;
-    text-decoration: none;
-    font-weight: 600px;
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
-nav a {
-    font-size: 23px;
-    color: #fff;
+nav li{
+    height: 50px;    
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
     text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
+    display:flex;
+    align-items: center;
+    color: #000000;
 }
 nav a:hover,
 nav a.active {
     color: rgb(255, 255, 255);
 }
+nav li:first-child{
+    margin-right: auto;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color:  rgb(61, 61, 179);
+    backdrop-filter: blur(10px);
+    box-shadow:-10px 0 10px black;
+    display: none;
+    flex-direction: column;
+    align-items:flex-start ;
+    justify-content: flex-start;
+
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+@media(max-width: 800px){
+    .hideOnMobile{
+        display: none;
+
+    }
+    .menu-button{
+        display: block;
+    }
+}
+@media(max-width:400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+
+
+
 
 section {
     min-height: 100vh;
@@ -55,6 +94,7 @@ section {
     background-color: rgb(255, 255, 255);
     color: #000000;
     font-weight: 700;
+    max-width: 100%;
 }
 
 h1 {
@@ -74,13 +114,23 @@ p{
     position: -ms-page;
     text-align: center;
 }
+.background{
+  background-image: url('back.png');
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+}
 
 .top{
     background-color:  rgb(255, 255, 255);
     float: inline-start;
+
 }
 .bottom{
-    float:left;
+    float:bottom;
     background-color:  rgb(253, 255, 255);
 }
 .imageme{
@@ -89,6 +139,10 @@ p{
     padding-left: 50px;
     padding-top: 45px;
     padding-bottom: 55px;
+    max-width: 100%;
+    width:fit-content
+
+
 }
 .text{
     float:right;
@@ -99,12 +153,10 @@ p{
 
 
 }
-ul{
+.text ul{
     list-style-image: url('https://img.icons8.com/?size=24&id=90304&format=png');
 }
-body{
-    font-family: Helvetica, Arial, sans-serif;
-  }
+
   .container{
     width: 70%;
     margin: 0 auto;
@@ -264,11 +316,23 @@ body{
 
 .all{
   background-color: rgb(255, 255, 255);
+  max-width: 100%;
 
 }
 .top1{
   align-items:baseline;
   background-color: #ffffff;
+  max-width: 100%;
+}
+.middle{
+  align-items:baseline;
+  background-color: #ffffff;
+  max-width: 100%;
+}
+.bottom1{
+  align-items:baseline;
+  background-color: #ffffff;
+  max-width: 100%;
 }
 .Python{
   float: right;
@@ -277,6 +341,7 @@ body{
   align-items: baseline;
   align-content: center;
   background-color: rgb(255, 255, 255);
+  max-width: 100%;
 }
 .IOT{
   float: left;
@@ -285,6 +350,7 @@ body{
   align-items:baseline;
   align-content: center;
   background-color: rgb(255, 255, 255);
+  max-width: 100%;
 
 }
 
@@ -293,36 +359,39 @@ body{
   border-radius: 5%;
   border: rgb(28, 28, 121);
   border-style: groove;
-  width: 150px;;
+  width: 100%;;
   height: 350px;
-  width: 500px;
+  max-width: 100%;
 }
 
 .Python img{
   border-radius: 5%;
   border: rgb(28, 28, 121);
   border-style: groove;
-  width: 150%;
+  width: 100%;
   height: 350px;
-  width: 500px;
+  max-width: 100%;
 }
 
 
 .third{
-  float: right;
+  float: left;
   height: 500px;
   width: 600px;
   align-items: baseline;
   align-content: center;
   background-color: rgb(255, 255, 255);
+  max-width: 100%;
 }
 .fourth{
-  float: left;
+  float: right;
   height: 500px;
   width: 600px;
+
   align-items:baseline;
   align-content: center;
   background-color: rgb(255, 255, 255);
+  max-width: 100%;
 
 
 }
@@ -332,62 +401,56 @@ body{
   border-radius: 5%;
   border: rgb(28, 28, 121);
   border-style: groove;
-
-  width: 150px;;
+  width: 100%;
   height: 350px;
-  width: 500px;
+
 }
 
 .fourth img{
   border-radius: 5%;
   border: rgb(28, 28, 121);
   border-style: groove;
-  width: 150%;
   height: 350px;
-  width: 500px;
+  width: 100%;
+}
+
+
+.fifth{
+  float: left;
+  height: 500px;
+  width: 600px;
+  align-items: baseline;
+  align-content: center;
+  background-color: rgb(255, 255, 255);
+  max-width: 100%;
+}
+.sixth{
+  float: right;
+  height: 500px;
+  width: 600px;
+
+  align-items:baseline;
+  align-content: center;
+  background-color: rgb(255, 255, 255);
+  max-width: 100%;
+
 
 }
 
 
+.fifth img{
+  border-radius: 5%;
+  border: rgb(28, 28, 121);
+  border-style: groove;
+  width: 100%;
+  height: 350px;
 
-
-
-
-
-
-.flex-caontainer{
-    display: flex;
-    justify-content: flex-start;
 }
 
-.contactInfo.language .percent
-{
-    position: relative;
-    width: 100%;
-    height: 6px;
-    background: #f18384;
-    display: block;
-    margin-top: 5px;
+.sixth img{
+  border-radius: 5%;
+  border: rgb(28, 28, 121);
+  border-style: groove;
+  height: 350px;
+  width: 100%;
 }
-.contactInfo.language .percent div
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background: #620305;
-}
-#object1 {
-    width: 500px;
-    height: 200px;
-    background-color: green;
-    object-fit: none;
-    object-position: center top;
-  }
-  #object2 {
-    width: 500px;
-    height: 200px;
-    background-color: green;
-    object-fit: none;
-    object-position: 50px 30px;
-  }
